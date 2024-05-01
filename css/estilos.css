@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    margin: 0;
+    margin-bottom: 70px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Color de fondo suave */
+}
+h1 {
+    margin-bottom: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366; /* Azul oscuro */
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+.logo h2 {
+    margin: 0;
+    font-size: 24px;
+}
+.logo span {
+    font-size: 18px;
+    color: #ffd700; /* Color dorado */
+}
+.navegacion ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navegacion li {
+    margin-left: 20px;
+}
+.navegacion a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+.navegacion a:hover {
+    color: #ffd700; /* Cambia el color al dorado al pasar el ratón */
+}
+
+.description {
+    color: black; 
+    font-size: 16px; 
+    line-height: 1.6; 
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    text-align: justify; 
+}
+
+/* Media queries para hacerlo responsive */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navegacion {
+        margin-top: 20px;
+    }
+    .navegacion ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navegacion li {
+        margin: 10px 0;
+    }
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    margin-top: 20px;
+}
+
+.card ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.card.historia {
+    background-image: url(../img/cat-8415620_1280.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: justify;
+    text-shadow: 2px 2px 4px black;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+/* Estilos para la tarjeta de turismo */
+.card.turismo {
+   background-image: url(../img/woman-8587090_1280.png);
+   background-size: cover;
+   color: #fff;
+   text-align: justify;
+   text-shadow: 2px 2px 4px black;
+   text-align: justify;
+   margin-top: 20px;
+   margin-bottom: 0;
+}
+
+/* Estilos para la tarjeta de gastronomía */
+.card.gastronomia {
+    background-image: url(../img/gorro_chef.jpg); /* Fondo naranja */
+    background-size: cover;
+    color: #fff; /* Texto blanco */
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px black;
+}
+/* Estilos para la tarjeta de contacto */
+.card.contacto {
+    background-image: url(../img/contactanos.jpg); /* Fondo azul */
+    background-size: cover;
+    color: #fff; /* Texto blanco */
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px black;
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Iconos */
+.card-icono {
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff; 
+    border-radius: 50%; 
+}
+
+.card-icono i {
+    color: #fff; 
+    font-size: 24px; 
+}
+/* Ubicacion Valdivia*/
+.ubicacion {
+    text-align: justify; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+.ubicacion h2 {
+    color: black; 
+    text-align: center;
+}
+.ubicacion p {
+    padding: 20px;
+    line-height: 1.6; 
+}
+/* Mapa Valdivia */
+.mapa {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.mapa iframe {
+    width: 80%; 
+    max-width: 800px; 
+    height: 450px; 
+}
+/*Historia */
+.historia-description {
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.historia-description p {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.video-container {
+    width: 80%; /* Ancho del contenedor del video */
+    max-width: 800px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    padding-bottom: 40%; /* Proporción 16:9 */
+    position: relative;
+    margin-top: 50px;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+}
+
+/* Turismo */
+.actividad-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.actividad {
+    flex: 0 1 calc(50% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.actividades h2 {
+    margin-bottom: 20px;
+}
+.actividad h3 {
+    margin-bottom: 10px;
+}
+
+.actividad p {
+    margin-bottom: 10px;
+}
+
+.actividad img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Galeria turismo */
+.galeria {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+.galeria h2 {
+    margin-bottom: 20px;
+}
+.galeria p {
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.6; 
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+    grid-gap: 20px;
+}
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en dispositivos móviles */
+    }
+}
+.grid-container img {
+    width: 100%;
+    height: 200px; /* Establecer altura fija para las imágenes */
+    object-fit: cover; /* Ajustar imagen para llenar el contenedor */
+    border-radius: 8px;
+}
+/* Tarjetas Gastronomia */
+.card {
+    text-align: justify;
+    margin-bottom: 20px;
+    position: relative;
+}
+.card-title {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+/* Formulario de contacto */
+form label {
+    color: #003366; /* Azul oscuro */
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    border: 2px solid #003366; /* Borde azul oscuro */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #007bff; /* Borde azul */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul suave */
+}
+
+form button[type="submit"] {
+    background-color: #003366; /* Azul oscuro */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3; /* Azul más claro al pasar el ratón */
+}
+.card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card-title {
+    color: #003366; /* Azul oscuro */
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #003366; /* Azul oscuro */
+    border-color: #003366; /* Borde azul oscuro */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Azul más claro al pasar el ratón */
+    border-color: #0056b3; /* Borde azul más claro al pasar el ratón */
+}
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Ajustar el ancho al 100% */
+}
+
+.redes-sociales a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.redes-sociales a:hover {
+    color: #ffd700; /* Cambia el color al dorado al pasar el ratón */
+}
+
+.redes-sociales i {
+    font-size: 24px;
+}
+
+.redes-sociales {
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
